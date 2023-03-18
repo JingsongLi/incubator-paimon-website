@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Filesystems on Apache Paimon</title>
+    <link>//paimon.apache.org/docs/master/filesystems/</link>
+    <description>Recent content in Filesystems on Apache Paimon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="//paimon.apache.org/docs/master/filesystems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overview</title>
+      <link>//paimon.apache.org/docs/master/filesystems/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//paimon.apache.org/docs/master/filesystems/overview/</guid>
+      <description>Overview #  Apache Flink Table Store utilizes the same pluggable file systems as Apache Flink. Users can follow the standard plugin mechanism to configure the plugin structure if using Flink as compute engine. However, for other engines like Spark or Hive, the provided opt jars (by Flink) may get conflicts and cannot be used directly. It is not convenient for users to fix class conflicts, thus Flink Table Store provides the self-contained and engine-unified FileSystem pluggable jars for user to query tables from Spark/Hive side.</description>
+    </item>
+    
+    <item>
+      <title>OSS</title>
+      <link>//paimon.apache.org/docs/master/filesystems/oss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//paimon.apache.org/docs/master/filesystems/oss/</guid>
+      <description>OSS #  Build To build from source code, either download the source of a release or clone the git repository.
+Build shaded jar with the following command.
+mvn clean install -DskipTests You can find the shaded jars under ./flink-table-store-filesystems/flink-table-store-oss/target/flink-table-store-oss-0.4-SNAPSHOT.jar.
+Usage #  Flink Put flink-table-store-oss-0.4-SNAPSHOT.jar into lib directory of your Flink home, and create catalog:
+CREATE CATALOG my_catalog WITH ( &amp;#39;type&amp;#39; = &amp;#39;table-store&amp;#39;, &amp;#39;warehouse&amp;#39; = &amp;#39;oss://path/to/warehouse&amp;#39;, &amp;#39;fs.oss.endpoint&amp;#39; = &amp;#39;oss-cn-hangzhou.aliyuncs.com&amp;#39;, &amp;#39;fs.</description>
+    </item>
+    
+    <item>
+      <title>S3</title>
+      <link>//paimon.apache.org/docs/master/filesystems/s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//paimon.apache.org/docs/master/filesystems/s3/</guid>
+      <description>S3 #  Build To build from source code, either download the source of a release or clone the git repository.
+Build shaded jar with the following command.
+mvn clean install -DskipTests You can find the shaded jars under ./flink-table-store-filesystems/flink-table-store-s3/target/flink-table-store-s3-0.4-SNAPSHOT.jar.
+Usage #  Flink Put flink-table-store-s3-0.4-SNAPSHOT.jar into lib directory of your Flink home, and create catalog:
+CREATE CATALOG my_catalog WITH ( &amp;#39;type&amp;#39; = &amp;#39;table-store&amp;#39;, &amp;#39;warehouse&amp;#39; = &amp;#39;s3://path/to/warehouse&amp;#39;, &amp;#39;s3.endpoint&amp;#39; = &amp;#39;your-endpoint-hostname&amp;#39;, &amp;#39;s3.</description>
+    </item>
+    
+  </channel>
+</rss>
